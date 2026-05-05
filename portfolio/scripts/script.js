@@ -1,3 +1,25 @@
+//Botão Modo claro/escuro - 30/04/26 ---------------------------------------------------------------------------------
+
+const botao = document.getElementById("modoClaroEscuro");
+console.log(botao);
+
+    let claro = true;
+    botao.addEventListener("click", function() {
+    if (claro) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white"
+        botao.textContent = "Modo Escuro";
+        claro = true;
+    }else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black"
+        botao.textContent = "Modo Claro";
+        claro = false;
+    }
+    claro = !claro;
+});
+//--------------------------------------------------------------------------------------------------------------------
+//Cálculo Data Formatura - 04/05/26 ----------------------------------------------------------------------------------
 // Dados Pessoais-----------------------------------------------------------------------------------------------------
 const NOME = "Otávio Gongra";
 let tituloProfissional = "otaviog36";
