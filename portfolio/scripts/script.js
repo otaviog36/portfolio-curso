@@ -70,3 +70,37 @@ document.getElementById("anoInfresso").innerText = `Ano de Ingresso: ${anoIngres
 document.getElementById("curso").innerText = `Curso: ${curso.nome} - Semestre: ${curso.semestre}`;
 document.getElementById("tempoRestanteParaFormatura").innerText = 
 `Tempo restante para a formatura: ${anoRestante} ano(s), ${mesRestante} meses e ${diaRestante} dias`;
+//condicionais if+switch - 06/05/26-----------------------------------------------------------------------------------
+if (anoFormatura - anoAtual <= 0) {
+    document.getElementById("tempoRestanteParaFormatura").innerText = `Tempo restante para a formatura: ${mesRestante} meses e ${diaRestante} dias`;
+}else if(anoFormatura - anoAtual === 1) {
+    document.getElementById("tempoRestanteParaFormatura").innerText = 'Tempo restante para formatura: ${anoFormatura - anoAtual} ano';
+}else{
+    document.getElementById("tempoRestanteParaFormatura").innerText = 'Tempo restante para formatura: ${anoFormatura - anoAtual} anos';
+}
+
+if (diaRestante <= 0 && mesesRestantes <= 0 && anoRestante <=0) {
+    document.getElementById("tempoRestanteParaFormatura").innerText = 'Curso Concluído';
+}
+
+let nota = 8;
+let aprovado = (nota>=6)? "Aprovado" : "Reprovado";
+
+document.write(`<p> Nota: ${nota} - ${aprovado}</p>`);
+
+let diaSemana = dataAtual.getDay()+1; //+1 pois inicia por zero que é um valor inexistente dentro dos dias da semana(começa por 1)
+
+let diaEscrito;
+
+switch(diaSemana) {
+    case 1: diaEscrito = "Domingo"; break;
+    case 2: diaEscrito = "Segunda-Feira"; break;
+    case 3: diaEscrito = "Terça-Feira"; break;
+    case 4: diaEscrito = "Quarta-Feira"; break;
+    case 2: diaEscrito = "Quinta-Feira"; break;
+    case 3: diaEscrito = "Sexta-Feira"; break;
+    case 7: diaEscrito = "Sábado"; break;
+    default: diaEscrito = "Dia inválido";
+}
+document.write(`<p>Hoje é: ${diaEscrito}</p>`);
+//quiz a seguir--------------------------------------------------------------------------------------------------------
