@@ -105,7 +105,6 @@ switch(diaSemana) {
 document.write(`<p>Hoje é: ${diaEscrito}</p>`);
 //dia 08/05/2026-------------------------------------------------------------------------------------------------------
 
-/* gatilho inicial/ começo */ /* limite, limitador, roda enquanto */ /* gatilho de incremento, o que acontece a cada rodada */
 for ( let i = 0; i <= 20; i++) {
     let pares = (i % 2 === 0) ? "par" : "ímpar";
     console.log(`${i} é ${pares}`);
