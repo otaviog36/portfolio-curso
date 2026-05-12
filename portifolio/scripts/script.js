@@ -129,3 +129,25 @@ let object = {
         for (let habilidade of object[categoria])
             document.write(`<p>${habilidade}</p>`);
 };
+//dia 12/05/2026-------------------------------------------------------------------------------------------------------
+let frutas = ["Maçã", "Banana", "Laranja", "Uva", "Abacaxi"];
+console.log(frutas);//Exibe o array original no console
+frutas.push("Manga"); //Adiciona um elemento no final do array
+console.log(frutas); //Exibe o array atualizado no console
+frutas.unshift("Morango"); //Adiciona um elemento no início do array
+console.log(frutas); //Exibe o array atualizado no console
+frutas.splice(2, 0, "Pera"); //Adiciona um elemento na posição 2, sem remover nenhum elemento
+console.log(frutas); //Exibe o array atualizado no console
+frutas.pop(); //Remove o último elemento do array
+console.log(frutas); //Exibe o array atualizado no console
+frutas.shift(); //Remove o primeiro elemento do array
+console.log(frutas); //Exibe o array atualizado no console
+
+console.log(frutas.indexOf("Laranja")); //Retorna o índice do elemento "Laranja"
+console.log(frutas.includes("Uva")); //Verifica se o elemento "Uva" está presente no array
+console.log(frutas.length); //Retorna o número de elementos no array
+console.log(frutas); //Exibe o array atualizado no console
+
+frutas.forEach(function(fruta) {
+    console.log(fruta); //Exibe cada fruta no console
+});
