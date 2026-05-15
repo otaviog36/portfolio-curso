@@ -114,7 +114,7 @@ for (let i = 0; i <= 20; i++) {
 
 // Objeto com dados pessoais e iteração das suas propriedades.
 let objeto = {
-    nome: "Otávio Gongra",
+    nome: `${NOME}`,
     idade: 18,
     curso: "ADS"
 };
@@ -164,7 +164,38 @@ let projetos = [
      descricao: "Sistema de estacionamento inteligente que utiliza reconhecimento de placas para gerenciar vagas e pagamentos."
     }
 ];
-document.createElement("h2").innerText = projetos[0].nome;
+let h2 = document.createElement("p");
+h2.innerText = projetos[0].nome;
+document.body.appendChild(h2);
 console.log(projetos[0].descricao);
 console.log(projetos[0].tecnologias);
 console.log(projetos[0].conhecimentos);
+// aula 14/05/26 funções
+function MyName(A) {
+    return(`Olá, meu nome é ${A}`);
+};
+console.log(MyName(NOME));
+
+
+const nascimento = 2008;
+document.createElement("p").innerText = MyName(NOME);
+function calcularIdade(anoNascimento) {
+    let minhaIdade = anoAtual - anoNascimento;
+    return minhaIdade;
+};
+console.log(`Minha idade é: ${calcularIdade(nascimento)} anos`);
+
+
+function calculoRestante(){
+    let anoRestante = anoFormatura - anoAtual;
+    let mesRestante = mesFormatura - mesAtual;
+    let diaRestante = diaFormatura - diaAtual;
+    if (anoRestante < 0 || (anoRestante === 0 && mesRestante < 0) || (anoRestante === 0 && mesRestante === 0 && diaRestante < 0)) {
+        document.getElementById("tempoRestanteParaFormatura").innerText = "Curso Concluído";
+    } else {
+        document.getElementById("tempoRestanteParaFormatura").innerText = `Tempo restante para a formatura: ${anoRestante} ano(s), ${mesRestante} meses e ${diaRestante} dias`;
+    }
+    
+};
+calculoRestante();
+
